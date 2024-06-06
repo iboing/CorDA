@@ -1,3 +1,0 @@
-[submodule "vllm"]
-	path = vllm
-	url = https://github.com/iboing/vllm.git

@@ -1,8 +1,8 @@
 # CorDA: Context-Oriented Decomposition Adaptation of Large Language Models
 
-(under construction)
+**(under construction)**
 
-Authors: Yibo Yang, Xiaojie Li, Zhongzhu Zhou, Shuaiwen Leon Song, Jianlong Wu, Liqiang Nie, Bernard Ghanem
+**Authors: Yibo Yang, Xiaojie Li, Zhongzhu Zhou, Shuaiwen Leon Song, Jianlong Wu, Liqiang Nie, Bernard Ghanem**
 
 ![corda](./assets/fig1.png)
 

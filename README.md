@@ -2,16 +2,22 @@
 
 **(under construction)**
 
-**Authors: Yibo Yang, Xiaojie Li, Zhongzhu Zhou, Shuaiwen Leon Song, Jianlong Wu, Liqiang Nie, Bernard Ghanem**
+Authors: [Yibo Yang](https://iboing.github.io/), Xiaojie Li, Zhongzhu Zhou, Shuaiwen Leon Song, [Jianlong Wu](https://jlwu1992.github.io/), [Liqiang Nie](https://liqiangnie.github.io/index.html), [Bernard Ghanem](http://www.bernardghanem.com/)
+
+Paper: [[PDF](https://arxiv.org/pdf/2406.05223)]
 
 ![corda](./assets/fig1.png)
+
+---
+
+## Getting Start
 
 
 ## Step 1: Context-oriented Decomposition
 
-### Knowledge-preserved adaptation
+### 📖 Knowledge-preserved adaptation
 
-### Instruction-previewed adaptation
+### 🔭 Instruction-previewed adaptation
 
 
 ## Step 2: Adapter Training

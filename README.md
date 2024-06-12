@@ -39,7 +39,7 @@ CUDA_VISIBLE_DEVICES=0 python build_corda.py \
     --calib_dataset "nqopen" \
     --calib_loader_size 256 \
     --save_model \
-    --save_path [path_to_initialized_model] \
+    --save_path [path_to_initialized_model]
 ```
 
 Arguments:
@@ -48,7 +48,7 @@ Arguments:
 - `--cov_aware` adopts our context-oriented decomposition and collects covariance matrices.
 - `--r` is the low rank of LoRA.
 - `--use_cache` adopts the dataloader and covariance matrices saved in `CorDA/cache`, to avoid calculating the covariance matrices again.
-- `--calib_dataset` specifies the dataset to sample data to obtain covariance matrices. KPA mode uses QA datasets with choices of `"nqopen"` and `traivia_qa`.
+- `--calib_dataset` specifies the dataset to sample data to obtain covariance matrices. KPA mode uses QA datasets with choices of `"nqopen"` and `"traivia_qa"`.
 - `--calib_loader_size` is the number of sampled data. 
 - `--save_model` saves the initialized model in `--save_path`. 
 
@@ -64,7 +64,7 @@ CUDA_VISIBLE_DEVICES=0 python build_corda.py \
     --calib_dataset "MetaMATH" \
     --calib_loader_size 256 \
     --save_model \
-    --save_path [path_to_initialized_model] \
+    --save_path [path_to_initialized_model]
 ```
 
 Arguments:

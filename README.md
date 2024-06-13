@@ -24,6 +24,8 @@ The dataset in json formats used to collect covariance matrices can be downloade
 
 ## Step 1: Context-oriented Decomposition
 
+You can skip Step 1 by directly downloading the decomposed model from our huggingface repo. 
+
 Corda enables to initialize a learnable adapter in two modes, knowledge-preserved adaptation (`tools/build_KPA.sh`) and instruction-previewed adaptation (`tools/build_IPA.sh`). The knowledge-preserved adaptation samples questions from QA datasets, such as `triviaQA` and `nq_open`, to obtain covariance matrices for decomposition, and uses the smallest $r$ singular values and vectors to initialize the adapter. The instruction-previewed adaptation samples queries and responses from the finetuning dataset to obtain covariance matrices, and initialize the adapter with the larget $r$ singular values and vectors. 
 
 ### 📖 Knowledge-preserved adaptation

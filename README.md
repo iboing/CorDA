@@ -128,4 +128,35 @@ sh tools/inference_Math.sh {path_to_merged_model}
 
 **Inference on Code and Instruction Following**:
 
-Inference on HumanEval and MBPP is based on [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness). Inference on MTBench is based on [FastChat](https://github.com/lm-sys/FastChat). We use their default settings for evaluation. 
+Evaluation on HumanEval and MBPP is based on [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness). Evaluation on MTBench is based on [FastChat](https://github.com/lm-sys/FastChat). We use their default settings for evaluation. 
+
+
+
+
+## Wikitext/PTB Results
+
+To reproduce the Figure 2 and Table 6 of our paper to compare our context-oriented decomposition with ASVD and Plain SVD, you can execute `tools/full_decompose.sh`. Concretely, 
+```bash
+CUDA_VISIBLE_DEVICES=0 python -u build_corda.py \
+    --model_id="meta-llama/Llama-2-7b-hf" \
+    --r {the smallest rank to discard} \
+    --mode full_decompose \
+    --use_cache \
+    --calib_dataset "wikitext2" \
+    --calib_loader_size 256 \
+    [--cov_aware for context-oriented decomposition, --act_aware for ASVD, or remove this argument for plain SVD]
+```
+**Arguments**:
+- `--r` is the number of the smallest singular values and vectors to discard, i.e., the x-axis of Figure 2. 
+- `--cov_aware` adopts our context-oriented SVD. Use `--act_aware` for ASVD or remove this argument for the Plain SVD. 
+
+## Citation
+If you find our work/code useful for your research, please consider citing:
+```
+@article{yang2024corda,
+  title={CorDA: Context-Oriented Decomposition Adaptation of Large Language Models},
+  author={Yang, Yibo and Li, Xiaojie and Zhou, Zhongzhu and Song, Shuaiwen Leon and Wu, Jianlong and Nie, Liqiang and Ghanem, Bernard},
+  journal={arXiv preprint arXiv:2406.05223},
+  year={2024}
+}
+```

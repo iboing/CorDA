@@ -133,6 +133,15 @@ sh tools/inference_Math.sh {path_to_merged_model}
 Evaluation on HumanEval and MBPP is based on [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness). Evaluation on MTBench is based on [FastChat](https://github.com/lm-sys/FastChat). We use their default settings for evaluation. 
 
 
+## Results
+
+| Method | TriviaQA | NQ open | GSM8k | Math |
+|---|---|---|---|---|
+|LoRA|44.17|1.91|42.68|5.92|
+|CorDA (KPA with nqopen) | **45.23** | **10.44** | 45.64 | 6.94|
+|CorDA (IPA with MetaMath) | - | - | **54.59** | **8.54** |
+
+The models can be downloaded from our huggingface repo. 
 
 
 ## Wikitext/PTB Results

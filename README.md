@@ -141,6 +141,8 @@ Evaluation on HumanEval and MBPP is based on [bigcode-evaluation-harness](https:
 |CorDA (KPA with nqopen) | **45.23** | **10.44** | 45.64 | 6.94|
 |CorDA (IPA with MetaMath) | - | - | **54.59** | **8.54** |
 
+Compared with LoRA, CorDA in knowledge-preserved adaptation (KPA) not only has better performances on the finetuning task, but also helps to mitigate the forgetting of world knowledge. CorDA in instruction-previewed adaptation (IPA) enables to further enhance the finetuning performance.
+
 The models can be downloaded from our huggingface repo. 
 
 

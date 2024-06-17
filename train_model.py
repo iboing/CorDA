@@ -165,17 +165,14 @@ def train():
     parser = transformers.HfArgumentParser(TrainingArguments)
     script_args = parser.parse_args_into_dataclasses()[0]
     print(script_args)    
-    model = transformers.AutoModelForCausalLM.from_pretrained(
-        script_args.model_name_or_path,
-        device_map="auto",
-        trust_remote_code=True
-    )
-    
-    ##  Check require_grad and learnable params
-    print(model)
 
     if script_args.corda_mode:
         print("Train in CorDA mode")
+        model = transformers.AutoModelForCausalLM.from_pretrained(
+            script_args.model_name_or_path,
+            device_map="auto",
+            trust_remote_code=True
+        )    
         for n, p in model.named_parameters():
             #print(n, p.requires_grad)
             if "ALinear" not in n and "BLinear" not in n and p.requires_grad:
@@ -183,6 +180,10 @@ def train():
                 #print("changed as False")
     elif script_args.lora_r is not None:
         print("Train in LoRA mode")
+        model = transformers.AutoModelForCausalLM.from_pretrained(
+            script_args.model_name_or_path,
+            device_map="auto",
+        )
         lora_config = LoraConfig(
             r=script_args.lora_r,
             lora_alpha=script_args.lora_r,
@@ -193,9 +194,15 @@ def train():
             task_type="CAUSAL_LM",
         )
         model = get_peft_model(model, lora_config)
-    else:
+    else:        
         print("Train in Full Finetuning mode")
-
+        model = transformers.AutoModelForCausalLM.from_pretrained(
+            script_args.model_name_or_path,
+            torch_dtype=torch.bfloat16,
+            device_map="auto",
+        )
+    print(model)
+    
     for n, p in model.named_parameters():
         print(n, p.requires_grad)
     trainable_params, all_param = get_nb_trainable_parameters(model)

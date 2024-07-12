@@ -20,7 +20,7 @@ cd CorDA
 pip install -r requirements.txt
 ```
 
-The dataset in json formats used to collect covariance matrices (MetaMath for math, CodeFeedback for code, WizardLM_evol_instruct and alpaca for instruct following) can be downloaded from our [huggingface repo](https://huggingface.co/collections/iboing/corda-66918a95105d80e9e131012f). The other datasets will be automatically downloaded when runing the code. 
+The dataset in json/jsonl formats used to collect covariance matrices (MetaMath for math, CodeFeedback for code, WizardLM_evol_instruct and alpaca for instruction following) can be downloaded from our [huggingface repo](https://huggingface.co/collections/iboing/corda-66918a95105d80e9e131012f). The other datasets will be automatically downloaded when runing the code. 
 
 ## Step 1: Context-oriented Decomposition
 

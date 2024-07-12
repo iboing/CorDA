@@ -20,7 +20,7 @@ cd CorDA
 pip install -r requirements.txt
 ```
 
-The dataset in json formats used to collect covariance matrices can be downloaded from our huggingface repo. The other datasets will be automatically downloaded when runing the code. 
+The dataset in json formats used to collect covariance matrices (MetaMath for math, CodeFeedback for code, WizardLM_evol_instruct and alpaca for instruct following) can be downloaded from our [huggingface repo](https://huggingface.co/collections/iboing/corda-66918a95105d80e9e131012f). The other datasets will be automatically downloaded when runing the code. 
 
 ## Step 1: Context-oriented Decomposition
 
@@ -138,12 +138,12 @@ Evaluation on HumanEval and MBPP is based on [bigcode-evaluation-harness](https:
 | Method | TriviaQA | NQ open | GSM8k | Math |
 |---|---|---|---|---|
 |LoRA|44.17|1.91|42.68|5.92|
-|CorDA (KPA with nqopen) | **45.23** | **10.44** | 45.64 | 6.94|
-|CorDA (IPA with MetaMath) | - | - | **54.59** | **8.54** |
+|[CorDA (KPA with nqopen)](https://huggingface.co/iboing/CorDA_KPA_nqopen_finetuned_math/tree/main) | **45.23** | **10.44** | 45.64 | 6.94|
+|[CorDA (IPA with MetaMath)](https://huggingface.co/iboing/CorDA_IPA_math_finetuned_math/tree/main) | - | - | **54.59** | **8.54** |
 
 Compared with LoRA, CorDA in knowledge-preserved adaptation (KPA) not only has better performances on the finetuning task, but also helps to mitigate the forgetting of world knowledge. CorDA in instruction-previewed adaptation (IPA) enables to further enhance the finetuning performance.
 
-The models can be downloaded from our huggingface repo. 
+The models can be downloaded from our [huggingface repo](https://huggingface.co/collections/iboing/corda-66918a95105d80e9e131012f). 
 
 
 ## Wikitext/PTB Results

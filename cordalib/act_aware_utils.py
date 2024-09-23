@@ -120,7 +120,7 @@ def calib_cov_distribution(model, calib_loader, use_cache=True, calib_dataset="w
     def hook(module, input, output):
         input = input[0].detach().squeeze(0).data   ## (2048, dim)
         #print(input.size())
-        #input = input.float()
+        input = input.float()
         input = input / torch.max(input).abs()
 
         #covariance = input.t() @ input ## (dim, dim)

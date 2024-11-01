@@ -1,4 +1,4 @@
-# CorDA: Context-Oriented Decomposition Adaptation of Large Language Models
+# CorDA: Context-Oriented Decomposition Adaptation of Large Language Models for Task-Aware Parameter-Efficient Fine-tuning 
 
 **(under construction)**
 

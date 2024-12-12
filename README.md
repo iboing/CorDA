@@ -10,6 +10,12 @@ Paper: [[PDF](https://arxiv.org/pdf/2406.05223)]
 
 ---
 
+## Attention
+
+CorDA is being integrated into [huggingface/peft](https://github.com/huggingface/peft). Our local branch is in [this repo](https://github.com/5eqn/peft), and you can find the example to use CorDA in [this page](https://github.com/5eqn/peft/tree/main/examples/corda_finetuning). 
+
+You can use our [local branch](https://github.com/5eqn/peft) for now, and it will be merged into `huggingface/peft:main` soon. 
+
 ## Getting Start
 
 Download the repo and install dependencies. 

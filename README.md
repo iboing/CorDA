@@ -6,9 +6,7 @@ Authors: [Yibo Yang](https://iboing.github.io/), Xiaojie Li, Zhongzhu Zhou, Shua
 
 Paper: [[PDF](https://arxiv.org/pdf/2406.05223)]
 
-![corda](./assets/fig1.png)
 
----
 
 ## Attention
 
@@ -17,6 +15,10 @@ CorDA is being integrated into [huggingface/peft](https://github.com/huggingface
 You can use our [local branch](https://github.com/5eqn/peft) for now, and it will be merged into `huggingface/peft:main` soon. 
 
 ## Getting Start
+
+![corda](./assets/fig1.png)
+
+---
 
 Download the repo and install dependencies. 
 

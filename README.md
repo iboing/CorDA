@@ -2,17 +2,25 @@
 
 **(NeurIPS 2024)**
 
-Authors: [Yibo Yang](https://iboing.github.io/), Xiaojie Li, Zhongzhu Zhou, Shuaiwen Leon Song, [Jianlong Wu](https://jlwu1992.github.io/), [Liqiang Nie](https://liqiangnie.github.io/index.html), [Bernard Ghanem](http://www.bernardghanem.com/)
+Authors: [Yibo Yang](https://iboing.github.io/), [Xiaojie Li](https://xiaojieli0903.github.io/), Zhongzhu Zhou, Shuaiwen Leon Song, [Jianlong Wu](https://jlwu1992.github.io/), [Liqiang Nie](https://liqiangnie.github.io/index.html), [Bernard Ghanem](http://www.bernardghanem.com/)
 
 Paper: [[PDF](https://arxiv.org/pdf/2406.05223)]
 
 
 
-## Attention
+## Attention !
 
-CorDA is being integrated into [huggingface/peft](https://github.com/huggingface/peft). Our local branch is in [this repo](https://github.com/5eqn/peft), and you can find the example to use CorDA in [this page](https://github.com/5eqn/peft/tree/main/examples/corda_finetuning). 
+CorDA has been integrated into [huggingface/peft](https://github.com/huggingface/peft). 
 
-You can use our [local branch](https://github.com/5eqn/peft) for now, and it will be merged into `huggingface/peft:main` soon. 
+<!-- It is suggested to implement our method by [huggingface/peft](https://github.com/huggingface/peft).-->
+<!-- Our local branch is in [this repo](https://github.com/5eqn/peft), and -->
+
+
+<!-- You can use our [local branch](https://github.com/5eqn/peft) for now, and it will be merged into `huggingface/peft:main` soon. -->
+
+The code in this repo (`iboing/CorDA`) only supports LLaMA-2, and you may write mapping files in `CorDA/mapping` when using other models. So, it is suggested to implement our method by [huggingface/peft](https://github.com/huggingface/peft).
+
+You can find the example to use CorDA in [huggingface/peft/examples/corda_finetuning](https://github.com/5eqn/peft/tree/main/examples/corda_finetuning). 
 
 ## Getting Start
 

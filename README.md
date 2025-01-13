@@ -20,7 +20,7 @@ CorDA has been integrated into [huggingface/peft](https://github.com/huggingface
 
 The code in this repo (`iboing/CorDA`) only supports LLaMA-2, and you may write mapping files in `CorDA/mapping` when using other models. So, it is suggested to implement our method by [huggingface/peft](https://github.com/huggingface/peft).
 
-You can find the example to use CorDA in [huggingface/peft/examples/corda_finetuning](https://github.com/5eqn/peft/tree/main/examples/corda_finetuning). 
+You can find the example to use CorDA in [huggingface/peft/examples/corda_finetuning](https://github.com/huggingface/peft/tree/main/examples/corda_finetuning). 
 
 ## Getting Start
 
